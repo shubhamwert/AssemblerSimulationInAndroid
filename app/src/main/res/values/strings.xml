@@ -2,4 +2,8 @@
     <string name="app_name">AssemblerByShubham</string>
     <string name="instruction_1">instruction 1!</string>
     <string name="submit">submit</string>
+    <string name="index">index</string>
+    <string name="index_register_value">index register value</string>
+    <string name="index_1">index 1</string>
+    <string name="symbol_table">Symbol Table</string>
 </resources>

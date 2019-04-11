@@ -32,7 +32,7 @@
         android:padding="12dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Hello World!"
+        android:hint="Instruction 2"
         android:id="@+id/main_code_2"
 
         />
@@ -44,7 +44,7 @@
         android:textColor="@android:color/black"        android:padding="12dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Hello World!"
+        android:hint="Instruction 3"
         android:id="@+id/main_code_3"
 
         />
@@ -57,11 +57,102 @@
         android:text="@string/submit"
         android:onClick="getCommand"/>
 </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/symbol_table"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textAppearance="@android:style/TextAppearance.Large"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
+        android:layout_weight="1"
         android:id="@+id/ll_dynamic"
-        android:orientation="horizontal" />
+        android:orientation="horizontal"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            >
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+
+            android:background="@android:color/white"
+            android:layout_height="wrap_content">
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="REG1"
+                android:id="@+id/inst1_reg"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="REG2"
+                android:id="@+id/inst2_reg"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="REG3"
+                android:id="@+id/inst3_reg"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+
+            android:background="@android:color/white"
+            android:layout_height="wrap_content">
+            <TextView
+               android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Value1"
+                android:id="@+id/val1"/>
+            <TextView
+                android:id="@+id/val2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Value2"/>
+            <TextView
+                android:id="@+id/val3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Value3"/>
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Accumulator"
+        android:id="@+id/acc_tv"/>
 
 </LinearLayout>
