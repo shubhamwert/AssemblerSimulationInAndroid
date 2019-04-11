@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AssemblerByShubham</string>
+    <string name="instruction_1">instruction 1!</string>
+    <string name="submit">submit</string>
+</resources>
