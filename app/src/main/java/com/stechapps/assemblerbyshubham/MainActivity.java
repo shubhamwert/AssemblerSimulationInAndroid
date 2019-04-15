@@ -195,6 +195,7 @@ public class MainActivity extends AppCompatActivity {
             insIndex.setText("#"+INDEXB);
 
         }else {insIndex.setText(""+temp);}
+
         TextView tv3 = findViewById(R.id.opcode_1);
         tv3.setText("" + opCodeId);
 
@@ -368,8 +369,8 @@ public class MainActivity extends AppCompatActivity {
             insIndex.setText("#"+INDEXB);
 
         }else {insIndex.setText(""+temp);}
-        TextView tv3 = findViewById(R.id.opcode_1);
-        tv3.setText("" + opCode);
+        TextView tv3 = findViewById(R.id.opcode_2);
+
         tv3.setText("" + opCodeId);
     }
 
@@ -540,7 +541,7 @@ public class MainActivity extends AppCompatActivity {
             insIndex.setText("#"+INDEXB);
 
         }else {insIndex.setText(""+temp);}
-        TextView tv3 = findViewById(R.id.opcode_1);
+        TextView tv3 = findViewById(R.id.opcode_3);
         tv3.setText("" + opCodeId);
 
 
@@ -554,6 +555,6 @@ public class MainActivity extends AppCompatActivity {
         getCommand2();
         getCommand3();
         TextView tv = findViewById(R.id.acc_tv);
-        tv.setText("Accumulator :: " + acc);
+        tv.setText(String.format("Accumulator :: %d", acc));
     }
 }
