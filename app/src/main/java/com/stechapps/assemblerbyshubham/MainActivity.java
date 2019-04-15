@@ -30,8 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private void getCommand1() {
         int opCodeId = 0;
         EditText ed;
-        String opCode = "";
-        int i = 0;
+        String opCode;
         ed = findViewById(R.id.main_code_1);
         String s = ed.getText().toString();
 
@@ -170,21 +169,32 @@ public class MainActivity extends AppCompatActivity {
         }
 
         TextView tv = findViewById(R.id.inst1_reg);
-        TextView insIndex = findViewById(R.id.inst2_intcode_index);
+        TextView tvval=findViewById(R.id.inter_val1);
+        TextView insIndex = findViewById(R.id.inst1_intcode_index);
         tv.setText(operant1);
         TextView tv2 = findViewById(R.id.val1);
         if (operant2.equals("B")) {
-            tv2.setText("" + B);
-            insIndex.setText("#" + INDEXB);
-        } else if (operant2.equals("A")) {
             tv2.setText("" + A);
-            insIndex.setText("#" + INDEXA);
+            tvval.setText("#"+INDEXB);
+
+        } else if (operant2.equals("A")) {
+            tv2.setText("" + B);
+            tvval.setText("#"+INDEXA);
+
 
         } else {
             temp = Integer.parseInt(operant2);
             tv2.setText("" + temp);
-            insIndex.setText("" + temp);
+            tvval.setText(""+temp);
+
         }
+        if (operant1.equals("A")) {
+            insIndex.setText("#"+INDEXA);
+        }
+       else if (operant1.equals("B")) {
+            insIndex.setText("#"+INDEXB);
+
+        }else {insIndex.setText(""+temp);}
         TextView tv3 = findViewById(R.id.opcode_1);
         tv3.setText("" + opCodeId);
 
@@ -331,22 +341,33 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
+        TextView tvval=findViewById(R.id.inter_val2);
         TextView tv = findViewById(R.id.inst2_reg);
-        TextView insIndex = findViewById(R.id.inst1_intcode_index);
+        TextView insIndex = findViewById(R.id.inst2_intcode_index);
         tv.setText(operant1);
         TextView tv2 = findViewById(R.id.val2);
         if (operant2.equals("B")) {
-            tv2.setText("" + B);
-            insIndex.setText("#" + INDEXB);
-        } else if (operant2.equals("A")) {
             tv2.setText("" + A);
-            insIndex.setText("#" + INDEXA);
+            tvval.setText("#"+INDEXB);
+
+        } else if (operant2.equals("A")) {
+            tv2.setText("" + B);
+            tvval.setText("#"+INDEXA);
+
 
         } else {
             temp = Integer.parseInt(operant2);
             tv2.setText("" + temp);
-            insIndex.setText("" + temp);
+            tvval.setText(""+temp);
+
         }
+        if (operant1.equals("A")) {
+            insIndex.setText("#"+INDEXA);
+        }
+        else if (operant1.equals("B")) {
+            insIndex.setText("#"+INDEXB);
+
+        }else {insIndex.setText(""+temp);}
         TextView tv3 = findViewById(R.id.opcode_1);
         tv3.setText("" + opCode);
         tv3.setText("" + opCodeId);
@@ -492,27 +513,40 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
-
+        TextView tvval=findViewById(R.id.inter_val3);
         TextView tv = findViewById(R.id.inst3_reg);
         TextView insIndex = findViewById(R.id.inst3_intcode_index);
         tv.setText(operant1);
         TextView tv2 = findViewById(R.id.val3);
         if (operant2.equals("B")) {
-            tv2.setText("" + B);
-            insIndex.setText("#" + INDEXB);
-        } else if (operant2.equals("A")) {
             tv2.setText("" + A);
-            insIndex.setText("#" + INDEXA);
+            tvval.setText("#"+INDEXB);
+
+        } else if (operant2.equals("A")) {
+            tv2.setText("" + B);
+            tvval.setText("#"+INDEXA);
+
 
         } else {
             temp = Integer.parseInt(operant2);
             tv2.setText("" + temp);
-            insIndex.setText("" + temp);
+            tvval.setText(""+temp);
+
         }
+        if (operant1.equals("A")) {
+            insIndex.setText("#"+INDEXA);
+        }
+        else if (operant1.equals("B")) {
+            insIndex.setText("#"+INDEXB);
+
+        }else {insIndex.setText(""+temp);}
         TextView tv3 = findViewById(R.id.opcode_1);
         tv3.setText("" + opCodeId);
 
+
     }
+
+
 
 
     public void getCommand(View view) {
