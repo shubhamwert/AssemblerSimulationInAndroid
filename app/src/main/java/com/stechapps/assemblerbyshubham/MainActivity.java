@@ -9,7 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-
+int i;
 
     int acc = 0;
     int A=0,B=0; //registers
@@ -28,8 +28,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void submit(View view) {
         String commands=ed.getText().toString().trim();
-        String[] commmandList=commands.split("\n");
-        for(int i=0;i<commmandList.length;i++){
+        String[] commmandList=commands.split("\\n");
+
+        for(i=0;i<commmandList.length;i++){
+
             ConvertToAssembly(commmandList[i]);
         }
 
@@ -46,11 +48,11 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-            opCode = s.split(" ")[0].trim();
-            operant1 = s.split(" ")[1].trim();
-            operant2 = ed.getText().toString().trim().split(" ")[2];
-            operant2 = operant2.replaceAll("\\s", "");
-            operant1 = operant1.replaceAll("\\s", "");
+            opCode = s.split(" ")[0];
+            operant1 = s.split(" ")[1];
+            operant2 = s.split(" ")[2];
+//            operant2 = operant2.replaceAll("\\s", "");
+//            operant1 = operant1.replaceAll("\\s", "");
             int temp;
             if (operant1.equals("A")) {
                 INDEXA = 1;
@@ -178,16 +180,40 @@ public class MainActivity extends AppCompatActivity {
 
 
             }
-            EditTables();
 
-    }
 
-    private void EditTables() {
     TextView tvSymbol,tvInter;
     tvSymbol=findViewById(R.id.symbol_text);
+    tvSymbol.requestFocus();
+    tvInter=findViewById(R.id.intermidiate_text);
+        if (operant1.equals("A")) {
+            tvInter.append(new StringBuilder().append(opCodeId).append("   #").append(INDEXA).toString());
+        }
+        else if (operant1.equals("B")) {
+            tvInter.append(new StringBuilder().append(opCodeId).append("   #").append(INDEXB).toString());
+
+        }else {tvInter.append(String.format("%d   %d", opCodeId, temp));}
 
 
+        tvSymbol.append((i+1)+"  "+operant1);
 
+        if (operant2.equals("B")) {
+            tvSymbol.append("  " + A);
+            tvInter.append("   #"+INDEXB);
+
+        } else if (operant2.equals("A")) {
+            tvSymbol.append("  " + B);
+            tvInter.append("   #"+INDEXA);
+
+
+        } else {
+            temp = Integer.parseInt(operant2);
+            tvSymbol.append("  " + temp);
+            tvInter.append("  "+temp);
+
+        }
+        tvInter.append("\n");
+        tvSymbol.append("\n");
     }
 
 

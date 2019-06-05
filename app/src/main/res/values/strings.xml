@@ -5,7 +5,7 @@
     <string name="index">index</string>
     <string name="index_register_value">index register value</string>
     <string name="index_1">index 1</string>
-    <string name="symbol_table">Symbol Table</string>
     <string name="code_list">MVI -----> 1000 \n MOV -----> 1005 \n DIV -----> 1010 \n DIVI -----> 1020 \n ADD -----> 1040 \n  ADI -----> 1030 \n  SBI -----> 1050 \n  SUB -----> 1065</string>
     <string name="symbol_table">Symbol Table</string>
+    <string name="intermidiate_code">Intermidiate Code</string>
 </resources>

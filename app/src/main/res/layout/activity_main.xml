@@ -12,11 +12,17 @@
     android:orientation="vertical"
     android:background="@android:color/background_dark">
     <EditText
+        android:focusedByDefault="true"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/m_editor"
         android:background="@android:color/white"
-        />
+        android:layout_weight="1"/>
+
+
+
+
     <TextView
         android:textColor="@android:color/white"
         android:text="@string/symbol_table"
@@ -30,29 +36,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/symbol_text"
+        android:padding="5dp"
+        android:gravity="center"
+
         android:background="@android:color/white"/>
-    <Button
+
+    <TextView
+        android:textColor="@android:color/white"
+        android:text="@string/intermidiate_code"
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/submit"
-        android:onClick="submit"/>
+        android:textAppearance="@android:style/TextAppearance.Large"
 
+        android:textAlignment="center"/>
+    <TextView
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/intermidiate_text"
+        android:padding="5dp"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        android:background="@android:color/white"/>
 
 
     <LinearLayout
@@ -80,5 +85,13 @@
         android:layout_height="wrap_content"
         android:text="Accumulator :: "
         android:textColor="@android:color/white" />
-    </LinearLayout></LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        android:onClick="submit"/>
+
+</LinearLayout>
 </ScrollView>
